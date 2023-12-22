@@ -1,0 +1,14 @@
+D:\Studia\3 semestr\systemy operacyjne\ProjektZaliczenie\bin\Debug\net7.0\ProjektZaliczenie.exe
+D:\Studia\3 semestr\systemy operacyjne\ProjektZaliczenie\bin\Debug\net7.0\ProjektZaliczenie.deps.json
+D:\Studia\3 semestr\systemy operacyjne\ProjektZaliczenie\bin\Debug\net7.0\ProjektZaliczenie.runtimeconfig.json
+D:\Studia\3 semestr\systemy operacyjne\ProjektZaliczenie\bin\Debug\net7.0\ProjektZaliczenie.dll
+D:\Studia\3 semestr\systemy operacyjne\ProjektZaliczenie\bin\Debug\net7.0\ProjektZaliczenie.pdb
+D:\Studia\3 semestr\systemy operacyjne\ProjektZaliczenie\obj\Debug\net7.0\ProjektZaliczenie.GeneratedMSBuildEditorConfig.editorconfig
+D:\Studia\3 semestr\systemy operacyjne\ProjektZaliczenie\obj\Debug\net7.0\ProjektZaliczenie.AssemblyInfoInputs.cache
+D:\Studia\3 semestr\systemy operacyjne\ProjektZaliczenie\obj\Debug\net7.0\ProjektZaliczenie.AssemblyInfo.cs
+D:\Studia\3 semestr\systemy operacyjne\ProjektZaliczenie\obj\Debug\net7.0\ProjektZaliczenie.csproj.CoreCompileInputs.cache
+D:\Studia\3 semestr\systemy operacyjne\ProjektZaliczenie\obj\Debug\net7.0\ProjektZaliczenie.dll
+D:\Studia\3 semestr\systemy operacyjne\ProjektZaliczenie\obj\Debug\net7.0\refint\ProjektZaliczenie.dll
+D:\Studia\3 semestr\systemy operacyjne\ProjektZaliczenie\obj\Debug\net7.0\ProjektZaliczenie.pdb
+D:\Studia\3 semestr\systemy operacyjne\ProjektZaliczenie\obj\Debug\net7.0\ProjektZaliczenie.genruntimeconfig.cache
+D:\Studia\3 semestr\systemy operacyjne\ProjektZaliczenie\obj\Debug\net7.0\ref\ProjektZaliczenie.dll
