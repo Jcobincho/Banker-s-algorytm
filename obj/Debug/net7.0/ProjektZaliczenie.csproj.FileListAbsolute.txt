@@ -12,3 +12,4 @@ D:\Studia\3 semestr\systemy operacyjne\ProjektZaliczenie\obj\Debug\net7.0\refint
 D:\Studia\3 semestr\systemy operacyjne\ProjektZaliczenie\obj\Debug\net7.0\ProjektZaliczenie.pdb
 D:\Studia\3 semestr\systemy operacyjne\ProjektZaliczenie\obj\Debug\net7.0\ProjektZaliczenie.genruntimeconfig.cache
 D:\Studia\3 semestr\systemy operacyjne\ProjektZaliczenie\obj\Debug\net7.0\ref\ProjektZaliczenie.dll
+D:\Studia\3 semestr\systemy operacyjne\ProjektZaliczenie\obj\Debug\net7.0\ProjektZaliczenie.sourcelink.json

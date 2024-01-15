@@ -6,6 +6,7 @@ class BankerAlgorithm
 {
     static int numResources = 3;
     static int[] availableResources = { 10, 5, 7 };
+    static object resourceLock = new object();
 
     static int[][] maxDemand = new int[][]
     {
@@ -34,10 +35,11 @@ class BankerAlgorithm
         new int[] {4, 3, 1}
     };
 
-    static object resourceLock = new object();
-
     static void Main()
     {
+        Console.WriteLine("Naciśnij Enter, aby rozpocząć przetwarzanie...");
+        Console.ReadLine();
+
         Thread[] threads = new Thread[maxDemand.Length];
         for (int i = 0; i < maxDemand.Length; i++)
         {
@@ -57,11 +59,15 @@ class BankerAlgorithm
         {
             throw new ArgumentNullException(nameof(threadIdObj));
         }
-        
+
         int threadId = (int)threadIdObj;
 
         while (true)
         {
+            Console.WriteLine($"Wątek {threadId} oczekuje na naciśnięcie Enter...");
+            Console.ReadLine();
+
+            Console.WriteLine($"Wątek {threadId} rozpoczyna przetwarzanie...");
             Thread.Sleep(TimeSpan.FromSeconds(new Random().NextDouble() * 1.5));
 
             int[] request = new int[numResources];
@@ -154,8 +160,7 @@ class BankerAlgorithm
                 break;
             }
         }
-
+        
         return finish.All(f => f);
     }
-
 }
