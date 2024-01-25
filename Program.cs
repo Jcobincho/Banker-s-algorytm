@@ -37,11 +37,11 @@ class BankerAlgorithm
 
     static void Main()
     {
-        Console.WriteLine("Naciśnij Enter, aby rozpocząć przetwarzanie...");
-        Console.ReadLine();
+        Console.Write("Podaj liczbę wątków do wykonania: ");
+        int numThreads = int.Parse(Console.ReadLine());
 
-        Thread[] threads = new Thread[maxDemand.Length];
-        for (int i = 0; i < maxDemand.Length; i++)
+        Thread[] threads = new Thread[numThreads];
+        for (int i = 0; i < numThreads; i++)
         {
             threads[i] = new Thread(ThreadFunction);
             threads[i].Start(i);
@@ -66,9 +66,11 @@ class BankerAlgorithm
         {
             Console.WriteLine($"Wątek {threadId} oczekuje na naciśnięcie Enter...");
             Console.ReadLine();
-
+            
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine($"Wątek {threadId} rozpoczyna przetwarzanie...");
-            Thread.Sleep(TimeSpan.FromSeconds(new Random().NextDouble() * 1.5));
+            Console.ResetColor();
+            Thread.Sleep(TimeSpan.FromSeconds(new Random().NextDouble() * 3));
 
             int[] request = new int[numResources];
             for (int i = 0; i < numResources; i++)
@@ -88,7 +90,10 @@ class BankerAlgorithm
             {
                 if (request[i] > remainingNeeds[threadId][i])
                 {
+                    Console.SetCursorPosition(0, Console.CursorTop - 1);
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine($"Żądanie wątku {threadId} przekracza pozostałe potrzeby. Prośba odrzucona.");
+                    Console.ResetColor();
                     return;
                 }
             }
@@ -97,7 +102,10 @@ class BankerAlgorithm
             {
                 if (request[i] > availableResources[i])
                 {
+                    Console.SetCursorPosition(0, Console.CursorTop - 1);
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine($"Żądanie wątku {threadId} przekracza dostępne zasoby. Prośba odrzucona.");
+                    Console.ResetColor();
                     return;
                 }
             }
@@ -112,7 +120,10 @@ class BankerAlgorithm
 
         if (IsSafeState())
         {
+            Console.SetCursorPosition(0, Console.CursorTop - 1);
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"Żądanie wątku {threadId} zostało przyjęte. Przydzielone zasoby: [{string.Join(", ", request)}]");
+            Console.ResetColor();
         }
         else
         {
@@ -126,7 +137,10 @@ class BankerAlgorithm
                 }
             }
 
+            Console.SetCursorPosition(0, Console.CursorTop - 1);
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine($"Żądanie wątku {threadId} odrzucone w celu utrzymania bezpiecznego stanu.");
+            Console.ResetColor();
         }
     }
 
